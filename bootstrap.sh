@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "if it works, it aint stupid"
+
 yum -y -q update
 
 if [[ $(nmcli con show | cut -d" " -f1 | grep -e enp0s3 | wc -l) -ge 1 ]]
